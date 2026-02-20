@@ -1,0 +1,17 @@
+C:\Users\muril\OneDrive\Documentos\Portifolio\.vs\OnSales\OnSales.Share.Data\bin\Debug\net8.0\OnSales.Share.Data.deps.json
+C:\Users\muril\OneDrive\Documentos\Portifolio\.vs\OnSales\OnSales.Share.Data\bin\Debug\net8.0\OnSales.Share.Data.runtimeconfig.json
+C:\Users\muril\OneDrive\Documentos\Portifolio\.vs\OnSales\OnSales.Share.Data\bin\Debug\net8.0\OnSales.Share.Data.dll
+C:\Users\muril\OneDrive\Documentos\Portifolio\.vs\OnSales\OnSales.Share.Data\bin\Debug\net8.0\OnSales.Share.Data.pdb
+C:\Users\muril\OneDrive\Documentos\Portifolio\.vs\OnSales\OnSales.Share.Data\bin\Debug\net8.0\OnSales.Share.Model.dll
+C:\Users\muril\OneDrive\Documentos\Portifolio\.vs\OnSales\OnSales.Share.Data\bin\Debug\net8.0\OnSales.Share.Model.pdb
+C:\Users\muril\OneDrive\Documentos\Portifolio\.vs\OnSales\OnSales.Share.Data\obj\Debug\net8.0\OnSales.Share.Data.csproj.AssemblyReference.cache
+C:\Users\muril\OneDrive\Documentos\Portifolio\.vs\OnSales\OnSales.Share.Data\obj\Debug\net8.0\OnSales.Share.Data.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\muril\OneDrive\Documentos\Portifolio\.vs\OnSales\OnSales.Share.Data\obj\Debug\net8.0\OnSales.Share.Data.AssemblyInfoInputs.cache
+C:\Users\muril\OneDrive\Documentos\Portifolio\.vs\OnSales\OnSales.Share.Data\obj\Debug\net8.0\OnSales.Share.Data.AssemblyInfo.cs
+C:\Users\muril\OneDrive\Documentos\Portifolio\.vs\OnSales\OnSales.Share.Data\obj\Debug\net8.0\OnSales.Share.Data.csproj.CoreCompileInputs.cache
+C:\Users\muril\OneDrive\Documentos\Portifolio\.vs\OnSales\OnSales.Share.Data\obj\Debug\net8.0\OnSales..DB389BE4.Up2Date
+C:\Users\muril\OneDrive\Documentos\Portifolio\.vs\OnSales\OnSales.Share.Data\obj\Debug\net8.0\OnSales.Share.Data.dll
+C:\Users\muril\OneDrive\Documentos\Portifolio\.vs\OnSales\OnSales.Share.Data\obj\Debug\net8.0\refint\OnSales.Share.Data.dll
+C:\Users\muril\OneDrive\Documentos\Portifolio\.vs\OnSales\OnSales.Share.Data\obj\Debug\net8.0\OnSales.Share.Data.pdb
+C:\Users\muril\OneDrive\Documentos\Portifolio\.vs\OnSales\OnSales.Share.Data\obj\Debug\net8.0\OnSales.Share.Data.genruntimeconfig.cache
+C:\Users\muril\OneDrive\Documentos\Portifolio\.vs\OnSales\OnSales.Share.Data\obj\Debug\net8.0\ref\OnSales.Share.Data.dll
