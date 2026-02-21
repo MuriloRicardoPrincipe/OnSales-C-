@@ -1,197 +1,118 @@
-🛒 OnSales
+# OnSales
 
-Sistema MVC para gestão de vendas, clientes e estoque, utilizando Repository Pattern, Entity Framework, Entity Security e autenticação via JWT.
+Sistema de vendas desenvolvido para estudo e prática de **arquitetura moderna em .NET**, com foco em boas práticas de backend, segurança, separação de responsabilidades e futura evolução para arquitetura orientada a eventos.
 
-📌 Sobre o Projeto
+---
 
-O OnSales é uma aplicação desenvolvida em ASP.NET MVC com foco em organização em camadas, separação de responsabilidades e boas práticas de arquitetura.
+## 🚀 Visão Geral
 
-A aplicação contempla:
+O **OnSales** é um projeto criado para simular um sistema de vendas real, inicialmente estruturado como um **monólito modular em ASP.NET MVC**, utilizando:
 
-Cadastro de clientes
+- Repository Pattern  
+- Interfaces para abstração  
+- Entity Framework  
+- Autenticação com JWT  
+- Controle de acesso (Entity Security)  
 
-Controle de vendas
+O objetivo principal é consolidar fundamentos sólidos de arquitetura antes da evolução para microsserviços com mensageria.
 
-Gestão de produtos
+---
 
-Controle de estoque
+## 🎯 Objetivos Técnicos
 
-Segurança com autenticação JWT
+Este projeto busca aprofundar conceitos como:
 
-Controle de acesso (Entity Security)
+- Separação de camadas (Controller → Service → Repository)
+- Princípios SOLID
+- Injeção de Dependência
+- ORM com Entity Framework
+- Autenticação stateless com JWT
+- Controle de concorrência e integridade de estoque
+- Preparação para arquitetura orientada a eventos
 
-🏗️ Arquitetura
+---
 
-O projeto segue o padrão:
+## 🧱 Arquitetura
 
-MVC (Model-View-Controller)
+- MVC (Model-View-Controller)
+- Repository Pattern
+- Interfaces para desacoplamento
+- Injeção de Dependência nativa do .NET
+- Segurança com JWT
+- Separação de domínio por módulos
 
-Repository Pattern
+O projeto foi estruturado para facilitar futura migração para:
 
-Interfaces para abstração
+- Microsserviços
+- Comunicação assíncrona
+- Event-Driven Architecture
 
-Injeção de Dependência
+---
 
-ORM com Entity Framework
+## 🧩 Domínio do Sistema
 
-Autenticação baseada em JSON Web Token
+### 👤 Cliente
+- Cadastro
+- Atualização
+- Consulta
+- Exclusão
 
-📂 Estrutura Base
-OnSales
-│
+### 📞 Contato
+- Cadastro de contatos vinculados ao cliente
+
+### 📍 Endereço
+- Cadastro e vínculo com cliente
+
+---
+
+### 📦 Produto
+- Cadastro de produtos
+- Atualização de dados
+- Controle de preço
+
+### 📊 Estoque
+- Entrada de produtos
+- Baixa automática por venda
+- Validação de saldo disponível
+
+---
+
+### 💰 Venda
+- Criação de venda
+- Associação com cliente
+- Inclusão de múltiplos itens
+- Cálculo automático do total
+
+### 🧾 VendaItem
+- Associação entre venda e produto
+- Controle de quantidade
+- Integração com estoque
+
+---
+
+## 🛠️ Tecnologias Utilizadas
+
+- ASP.NET MVC  
+- C#  
+- SQL Server  
+- Entity Framework  
+- JWT  
+- Injeção de Dependência  
+- Repository Pattern  
+
+---
+
+## 📦 Estrutura do Projeto
+
+```text
+onsales/
 ├── Controllers
 ├── Services
 ├── Repositories
 │   ├── Interfaces
 │   └── Implementations
 ├── Models
+├── DTOs
 ├── Data (DbContext)
 ├── Security
-└── DTOs
-🔐 Segurança
-
-O sistema implementa:
-
-Autenticação via JWT
-
-Controle de acesso por perfil
-
-Proteção de endpoints
-
-Boas práticas de segurança com Entity Security
-
-Fluxo básico:
-
-Usuário realiza login
-
-Sistema gera token JWT
-
-Token é enviado no header:
-
-Authorization: Bearer {token}
-
-Endpoints protegidos validam o token
-
-🧩 Módulos do Sistema
-👤 Cliente
-
-Cadastro
-
-Atualização
-
-Exclusão
-
-Consulta
-
-📞 Contato
-
-Cadastro de contatos vinculados ao cliente
-
-📍 Endereço
-
-Cadastro de endereço por cliente
-
-🛍️ Produto
-
-Cadastro de produtos
-
-Atualização de dados
-
-Controle de preço
-
-📦 Estoque
-
-Entrada de produtos
-
-Baixa automática por venda
-
-Consulta de saldo disponível
-
-💰 Venda
-
-Criação de venda
-
-Associação de cliente
-
-Inclusão de múltiplos itens
-
-🧾 VendaItem
-
-Associação de produtos à venda
-
-Cálculo de valor total
-
-Integração com estoque
-
-🔄 Serviços de Controle
-
-O sistema possui regras de negócio para:
-
-Validação de estoque antes da venda
-
-Baixa automática de estoque
-
-Cálculo de total da venda
-
-Controle de integridade entre Venda e VendaItem
-
-🚀 Tecnologias Utilizadas
-
-ASP.NET MVC
-
-C#
-
-Repository Pattern
-
-Injeção de Dependência
-
-Entity Framework
-
-JWT
-
-SQL Server
-
-▶️ Como Executar
-
-Clonar o repositório:
-
-git clone https://github.com/seu-usuario/onsales.git
-
-Configurar a connection string no appsettings.json
-
-Executar as migrations:
-
-dotnet ef database update
-
-Rodar a aplicação:
-
-dotnet run
-📈 Próximas Atualizações
-
-🔄 Integração com RabbitMQ
-
-☸️ Orquestração com Kubernetes
-
-Separação em microsserviços
-
-Implementação de mensageria para eventos de venda
-
-Escalabilidade horizontal
-
-🎯 Objetivo do Projeto
-
-O OnSales foi desenvolvido com foco em:
-
-Aplicar boas práticas de arquitetura
-
-Separação clara de responsabilidades
-
-Base sólida para evolução para microsserviços
-
-Segurança moderna com JWT
-
-Facilidade de manutenção e escalabilidade
-
-📄 Licença
-
-Projeto para fins de estudo e evolução profissional.
+└── README.md
