@@ -18,7 +18,7 @@ public class VendaItens :BaseEntity
         UserChageFile(userUpdateId);
         CriaData();
     }
-    private VendaItens() { }
+    protected VendaItens() { }
     public void AtualizarVendaItem(Guid userUpdateId, Guid vendaId, Guid ProdutoId, int quantidade, decimal total)
     {
         this.VendaId = vendaId;

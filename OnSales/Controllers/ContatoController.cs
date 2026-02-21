@@ -11,7 +11,7 @@ namespace OnSales.Controllers;
 [Route("[controller]")]
 public class ContatoController : Controller
 {
-    private IContatoRepository _repository;
+    private readonly IContatoRepository _repository;
     private readonly IUserContext _userContext;
 
     public ContatoController(IContatoRepository repository, IUserContext userContext)

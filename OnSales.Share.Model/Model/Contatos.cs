@@ -17,7 +17,7 @@ public class Contatos : BaseEntity
         CriaData();
     }
 
-    private Contatos() { }
+    protected Contatos() { }
 
     public void atualizarContato(Guid userUpdateId, Guid clienteId, string telefone, string email, string celular)
     {

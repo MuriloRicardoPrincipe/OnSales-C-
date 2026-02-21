@@ -3,8 +3,16 @@
   "WorkspaceRootPath": "C:\\Users\\muril\\OneDrive\\Documentos\\Portifolio\\.vs\\OnSales\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{A4B66D3D-180E-4C47-B23B-F3CC8320BFC8}|OnSales\\OnSales.csproj|c:\\users\\muril\\onedrive\\documentos\\portifolio\\.vs\\onsales\\onsales\\repository\\vendaitemrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A4B66D3D-180E-4C47-B23B-F3CC8320BFC8}|OnSales\\OnSales.csproj|solutionrelative:onsales\\repository\\vendaitemrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{A4B66D3D-180E-4C47-B23B-F3CC8320BFC8}|OnSales\\OnSales.csproj|c:\\users\\muril\\onedrive\\documentos\\portifolio\\.vs\\onsales\\onsales\\dto\\venda\\readvendadto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A4B66D3D-180E-4C47-B23B-F3CC8320BFC8}|OnSales\\OnSales.csproj|solutionrelative:onsales\\dto\\venda\\readvendadto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{BA89F4BB-FC43-43E4-96D7-1D6E69F2FFFA}|OnSales.Share.Model\\OnSales.Share.Model.csproj|c:\\users\\muril\\onedrive\\documentos\\portifolio\\.vs\\onsales\\onsales.share.model\\model\\vendas.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{BA89F4BB-FC43-43E4-96D7-1D6E69F2FFFA}|OnSales.Share.Model\\OnSales.Share.Model.csproj|solutionrelative:onsales.share.model\\model\\vendas.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A4B66D3D-180E-4C47-B23B-F3CC8320BFC8}|OnSales\\OnSales.csproj|c:\\users\\muril\\onedrive\\documentos\\portifolio\\.vs\\onsales\\onsales\\controllers\\vendacontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A4B66D3D-180E-4C47-B23B-F3CC8320BFC8}|OnSales\\OnSales.csproj|solutionrelative:onsales\\controllers\\vendacontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -23,14 +31,40 @@
             {
               "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "VendaItemRepository.cs",
-              "DocumentMoniker": "C:\\Users\\muril\\OneDrive\\Documentos\\Portifolio\\.vs\\OnSales\\OnSales\\Repository\\VendaItemRepository.cs",
-              "RelativeDocumentMoniker": "OnSales\\Repository\\VendaItemRepository.cs",
-              "ToolTip": "C:\\Users\\muril\\OneDrive\\Documentos\\Portifolio\\.vs\\OnSales\\OnSales\\Repository\\VendaItemRepository.cs",
-              "RelativeToolTip": "OnSales\\Repository\\VendaItemRepository.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAACIAAAAaAAAAAAAAAA==",
+              "Title": "ReadVendaDto.cs",
+              "DocumentMoniker": "C:\\Users\\muril\\OneDrive\\Documentos\\Portifolio\\.vs\\OnSales\\OnSales\\DTO\\Venda\\ReadVendaDto.cs",
+              "RelativeDocumentMoniker": "OnSales\\DTO\\Venda\\ReadVendaDto.cs",
+              "ToolTip": "C:\\Users\\muril\\OneDrive\\Documentos\\Portifolio\\.vs\\OnSales\\OnSales\\DTO\\Venda\\ReadVendaDto.cs",
+              "RelativeToolTip": "OnSales\\DTO\\Venda\\ReadVendaDto.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAAEAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-02-20T12:31:46.46Z",
+              "WhenOpened": "2026-02-21T11:21:06.011Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Vendas.cs",
+              "DocumentMoniker": "C:\\Users\\muril\\OneDrive\\Documentos\\Portifolio\\.vs\\OnSales\\OnSales.Share.Model\\Model\\Vendas.cs",
+              "RelativeDocumentMoniker": "OnSales.Share.Model\\Model\\Vendas.cs",
+              "ToolTip": "C:\\Users\\muril\\OneDrive\\Documentos\\Portifolio\\.vs\\OnSales\\OnSales.Share.Model\\Model\\Vendas.cs",
+              "RelativeToolTip": "OnSales.Share.Model\\Model\\Vendas.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAALAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-02-21T11:21:12.342Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "VendaController.cs",
+              "DocumentMoniker": "C:\\Users\\muril\\OneDrive\\Documentos\\Portifolio\\.vs\\OnSales\\OnSales\\Controllers\\VendaController.cs",
+              "RelativeDocumentMoniker": "OnSales\\Controllers\\VendaController.cs",
+              "ToolTip": "C:\\Users\\muril\\OneDrive\\Documentos\\Portifolio\\.vs\\OnSales\\OnSales\\Controllers\\VendaController.cs",
+              "RelativeToolTip": "OnSales\\Controllers\\VendaController.cs",
+              "ViewState": "AgIAAAkAAAAAAAAAAAAAAB8AAAAjAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-02-21T11:12:21.554Z",
               "EditorCaption": ""
             }
           ]

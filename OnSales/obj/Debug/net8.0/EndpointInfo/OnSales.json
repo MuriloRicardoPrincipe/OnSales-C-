@@ -1629,6 +1629,10 @@
             "type": "string",
             "format": "uuid"
           },
+          "total": {
+            "type": "number",
+            "format": "double"
+          },
           "ativo": {
             "type": "boolean"
           },

@@ -10,7 +10,7 @@ namespace OnSales.Controllers;
 [Route("[controller]")]
 public class ClienteController : Controller
 {
-    private IClienteRepository _repository;
+    private readonly IClienteRepository _repository;
     private readonly IUserContext _userContext;
 
     public ClienteController (IClienteRepository repository, IUserContext userContext)

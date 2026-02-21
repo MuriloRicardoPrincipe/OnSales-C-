@@ -5,6 +5,7 @@ C:\Users\muril\OneDrive\Documentos\Portifolio\.vs\OnSales\OnSales.Share.Model\ob
 C:\Users\muril\OneDrive\Documentos\Portifolio\.vs\OnSales\OnSales.Share.Model\obj\Debug\net8.0\OnSales.Share.Model.AssemblyInfoInputs.cache
 C:\Users\muril\OneDrive\Documentos\Portifolio\.vs\OnSales\OnSales.Share.Model\obj\Debug\net8.0\OnSales.Share.Model.AssemblyInfo.cs
 C:\Users\muril\OneDrive\Documentos\Portifolio\.vs\OnSales\OnSales.Share.Model\obj\Debug\net8.0\OnSales.Share.Model.csproj.CoreCompileInputs.cache
+C:\Users\muril\OneDrive\Documentos\Portifolio\.vs\OnSales\OnSales.Share.Model\obj\Debug\net8.0\OnSales.Share.Model.sourcelink.json
 C:\Users\muril\OneDrive\Documentos\Portifolio\.vs\OnSales\OnSales.Share.Model\obj\Debug\net8.0\OnSales.Share.Model.dll
 C:\Users\muril\OneDrive\Documentos\Portifolio\.vs\OnSales\OnSales.Share.Model\obj\Debug\net8.0\refint\OnSales.Share.Model.dll
 C:\Users\muril\OneDrive\Documentos\Portifolio\.vs\OnSales\OnSales.Share.Model\obj\Debug\net8.0\OnSales.Share.Model.pdb

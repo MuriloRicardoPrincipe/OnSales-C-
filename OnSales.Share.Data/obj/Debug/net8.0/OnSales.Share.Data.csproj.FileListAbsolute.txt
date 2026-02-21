@@ -9,6 +9,7 @@ C:\Users\muril\OneDrive\Documentos\Portifolio\.vs\OnSales\OnSales.Share.Data\obj
 C:\Users\muril\OneDrive\Documentos\Portifolio\.vs\OnSales\OnSales.Share.Data\obj\Debug\net8.0\OnSales.Share.Data.AssemblyInfoInputs.cache
 C:\Users\muril\OneDrive\Documentos\Portifolio\.vs\OnSales\OnSales.Share.Data\obj\Debug\net8.0\OnSales.Share.Data.AssemblyInfo.cs
 C:\Users\muril\OneDrive\Documentos\Portifolio\.vs\OnSales\OnSales.Share.Data\obj\Debug\net8.0\OnSales.Share.Data.csproj.CoreCompileInputs.cache
+C:\Users\muril\OneDrive\Documentos\Portifolio\.vs\OnSales\OnSales.Share.Data\obj\Debug\net8.0\OnSales.Share.Data.sourcelink.json
 C:\Users\muril\OneDrive\Documentos\Portifolio\.vs\OnSales\OnSales.Share.Data\obj\Debug\net8.0\OnSales..DB389BE4.Up2Date
 C:\Users\muril\OneDrive\Documentos\Portifolio\.vs\OnSales\OnSales.Share.Data\obj\Debug\net8.0\OnSales.Share.Data.dll
 C:\Users\muril\OneDrive\Documentos\Portifolio\.vs\OnSales\OnSales.Share.Data\obj\Debug\net8.0\refint\OnSales.Share.Data.dll

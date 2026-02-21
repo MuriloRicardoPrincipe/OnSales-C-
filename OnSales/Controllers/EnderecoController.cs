@@ -10,12 +10,13 @@ namespace OnSales.Controllers;
 [Route("[controller]")]
 public class EnderecoController : Controller
 {
-    private IEnderecoRepository _repository;
+    private readonly IEnderecoRepository _repository;
     private readonly IUserContext _userContext;
 
-    public EnderecoController(IEnderecoRepository repository)
+    public EnderecoController(IEnderecoRepository repository, IUserContext userContext)
     {
         _repository = repository;
+        _userContext = userContext;
     }
 
     [HttpPost]

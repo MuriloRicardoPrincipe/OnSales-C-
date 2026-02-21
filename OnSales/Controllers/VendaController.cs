@@ -10,19 +10,20 @@ namespace OnSales.Controllers;
 [Route("[controller]")]
 public class VendaController : Controller
 {
-    private IVendaRepository _VendaRepository;
+    private readonly IVendaRepository _repository;
     private readonly IUserContext _userContext;
 
-    public VendaController(IVendaRepository VendaRepository)
+    public VendaController(IVendaRepository repository, IUserContext userContext)
     {
-        _VendaRepository = VendaRepository;
+        _repository = repository;
+        _userContext = userContext;
     }
 
     [HttpPost]
     public async Task<IActionResult> AddVenda([FromBody] CriaAtualizaVendaDto Dto)
     {
  
-        await _VendaRepository.Criar(_userContext.UserId, Dto);
+        await _repository.Criar(_userContext.UserId, Dto);
 
         return Ok();
     }
@@ -30,7 +31,7 @@ public class VendaController : Controller
     [HttpGet]
     public IEnumerable<ReadVendaDto> GetClients()
     {
-        var prod = _VendaRepository.GetAll();
+        var prod = _repository.GetAll();
 
         return prod;
 
@@ -40,7 +41,7 @@ public class VendaController : Controller
     [HttpGet("{id}")]
     public IActionResult GetVendaById(Guid id)
     {
-        var prod = _VendaRepository.GetById(id);
+        var prod = _repository.GetById(id);
 
         if (prod != null)
         {
@@ -52,7 +53,7 @@ public class VendaController : Controller
     [HttpDelete("{id}")]
     public async Task<IActionResult> Delete(Guid id)
     {
-        var deleted = await _VendaRepository.Delete(id);
+        var deleted = await _repository.Delete(id);
 
         if (!deleted)
             return NotFound();
@@ -66,7 +67,7 @@ public class VendaController : Controller
     {
         try
         {
-            await _VendaRepository.Update(id, _userContext.UserId, dto);
+            await _repository.Update(id, _userContext.UserId, dto);
             return Ok(new { message = "Atualizado com sucesso." });
         }
         catch(KeyNotFoundException ex)

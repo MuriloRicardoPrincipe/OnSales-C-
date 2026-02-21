@@ -17,7 +17,7 @@ public class Clientes : BaseEntity
         CriaData();
     }
 
-    private Clientes() { }
+    protected Clientes() { }
 
     public void AtualizacaoCliente(Guid userUpdateId, string nome, TipoDocumento tipoDocumento, string documento)
     {

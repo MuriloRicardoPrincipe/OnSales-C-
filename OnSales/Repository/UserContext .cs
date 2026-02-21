@@ -16,10 +16,10 @@ public class UserContext : IUserContext
     {
         get
         {
+
             var userId = _accessor.HttpContext?
                 .User?
-                .FindFirst(ClaimTypes.NameIdentifier)?
-                .Value;
+                .FindFirst("userId")?.Value;
 
             if (userId is null)
                 throw new UnauthorizedAccessException("Usuário não autenticado");

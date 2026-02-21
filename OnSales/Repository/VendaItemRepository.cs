@@ -19,35 +19,40 @@ public class VendaItemRepository : IVendaItemRepository
 
     public async Task Criar(Guid userId, CriaAtualizaVendaItemDto dto)
     {
-        var venda = await _context.Vendas.FirstOrDefaultAsync(p => p.Id == dto.VendaId);
-        var produto = await _context.Produtos.FirstOrDefaultAsync(p => p.Id == dto.ProdutoId);
-        var estoque = await _context.Estoques.FirstOrDefaultAsync(p => p.ProdutoId == dto.ProdutoId);
+        using var transaction = await _context.Database.BeginTransactionAsync();
 
-        if (!validaQuantidade(estoque.Quantidade, dto.Quantidade)) throw new Exception("Quantidade invalida, validar quantidade em estoque!");
-        estoque.RetiradaEstoque(estoque.Quantidade, dto.Quantidade);
+        var venda = await _context.Vendas
+            .FirstOrDefaultAsync(p => p.Id == dto.VendaId)
+            ?? throw new KeyNotFoundException("Venda não encontrada.");
 
-        var total = totalVendaItem(dto.Quantidade, produto.PrecoVenda);
+        var produto = await _context.Produtos
+            .FirstOrDefaultAsync(p => p.Id == dto.ProdutoId)
+            ?? throw new KeyNotFoundException("Produto não encontrado.");
 
-        VendaItens vendaItens = new VendaItens(
+        var estoque = await _context.Estoques
+            .FirstOrDefaultAsync(p => p.ProdutoId == dto.ProdutoId)
+            ?? throw new KeyNotFoundException("Estoque não encontrado.");
+
+        // 🔥 Agora o estoque se valida sozinho
+        estoque.Retirar(dto.Quantidade);
+
+        var totalItem = Math.Round(produto.PrecoVenda * dto.Quantidade, 2, MidpointRounding.AwayFromZero);
+
+        var vendaItem = new VendaItens(
             Guid.NewGuid(),
             userId,
             dto.VendaId,
             dto.ProdutoId,
             dto.Quantidade,
-            total
+            totalItem
         );
 
+        await _context.VendaItens.AddAsync(vendaItem);
 
-        await _context.VendaItens.AddAsync(vendaItens);
+        venda.AtualizaVendaTotal(userId, venda.Total + totalItem);
+
         await _context.SaveChangesAsync();
-
-
-        var novoTotal = CalcularTotalVenda(venda);
-        venda.AtualizaVendaTotal(userId, novoTotal);
-
-        await _context.Vendas.AddAsync(venda);
-        await _context.SaveChangesAsync();
-
+        await transaction.CommitAsync();
     }
 
     public async Task<bool> Delete(Guid id)
@@ -79,55 +84,62 @@ public class VendaItemRepository : IVendaItemRepository
 
         return prod;
     }
-
     public async Task Update(Guid id, Guid userId, CriaAtualizaVendaItemDto dto)
     {
+        using var transaction = await _context.Database.BeginTransactionAsync();
+
         var vendaItem = await _context.VendaItens
             .FirstOrDefaultAsync(p => p.Id == id)
             ?? throw new KeyNotFoundException("Item de venda não encontrado.");
 
-        var venda = await _context.Vendas.FirstOrDefaultAsync(p => p.Id == dto.VendaId)
-            ?? throw new KeyNotFoundException("Venda não encontrada."); 
-        var produto = await _context.Produtos.FirstOrDefaultAsync(p => p.Id == dto.ProdutoId)
-            ?? throw new KeyNotFoundException("Venda não encontrada."); 
-        var estoque = await _context.Estoques.FirstOrDefaultAsync(p => p.ProdutoId == dto.ProdutoId)
+        var venda = await _context.Vendas
+            .FirstOrDefaultAsync(p => p.Id == vendaItem.VendaId)
             ?? throw new KeyNotFoundException("Venda não encontrada.");
 
-        estoque.DevolvendoEstoque(estoque.Quantidade, vendaItem.Quantidade);
+        var produtoNovo = await _context.Produtos
+            .FirstOrDefaultAsync(p => p.Id == dto.ProdutoId)
+            ?? throw new KeyNotFoundException("Produto não encontrado.");
 
-        if (!validaQuantidade(estoque.Quantidade, dto.Quantidade)) throw new Exception("Quantidade invalida, validar quantidade em estoque!");
+        decimal totalAntigoItem = vendaItem.Total;
 
-        estoque.RetiradaEstoque(estoque.Quantidade, dto.Quantidade);
+        if (dto.ProdutoId != vendaItem.ProdutoId)
+        {
+            var estoqueAntigo = await _context.Estoques
+                .FirstAsync(p => p.ProdutoId == vendaItem.ProdutoId);
 
-        var total = totalVendaItem(dto.Quantidade, produto.PrecoVenda);
+            var estoqueNovo = await _context.Estoques
+                .FirstAsync(p => p.ProdutoId == dto.ProdutoId);
+
+            estoqueAntigo.Devolver(vendaItem.Quantidade);
+            estoqueNovo.Retirar(dto.Quantidade);
+        }
+        else
+        {
+            var estoque = await _context.Estoques
+                .FirstAsync(p => p.ProdutoId == dto.ProdutoId);
+
+            var diferenca = dto.Quantidade - vendaItem.Quantidade;
+
+            if (diferenca > 0)
+                estoque.Retirar(diferenca);
+            else if (diferenca < 0)
+                estoque.Devolver(Math.Abs(diferenca));
+        }
+
+        var novoTotalItem = Math.Round(produtoNovo.PrecoVenda * dto.Quantidade, 2, MidpointRounding.AwayFromZero);
 
         vendaItem.AtualizarVendaItem(
             userId,
             dto.VendaId,
             dto.ProdutoId,
             dto.Quantidade,
-            total
+            novoTotalItem
         );
 
+        var diferencaTotal = novoTotalItem - totalAntigoItem;
+        venda.AtualizaVendaTotal(userId, venda.Total + diferencaTotal);
+
         await _context.SaveChangesAsync();
-    }
-
-    private bool validaQuantidade(int quantidadeEstoque, int quantidadeVenda)
-    {
-        if (quantidadeEstoque < quantidadeVenda) return false;
-
-        else return true;
-    }
-
-    private decimal totalVendaItem(int quantidade, decimal preco)
-    {
-        var total = preco * quantidade;
-        return Math.Round(total, 2, MidpointRounding.AwayFromZero);
-    }
-
-    public decimal CalcularTotalVenda(Vendas venda)
-    {
-        var itens = _context.VendaItens.Where(vi => vi.VendaId == venda.Id).Sum(i => i.Total);
-        return itens;
+        await transaction.CommitAsync();
     }
 }

@@ -11,12 +11,13 @@ namespace OnSales.Controllers;
 [Route("[controller]")]
 public class VendaItemController : Controller
 {
-    private IVendaItemRepository _repository;
+    private readonly IVendaItemRepository _repository;
     private readonly IUserContext _userContext;
 
-    public VendaItemController(IVendaItemRepository VendaItemRepository)
+    public VendaItemController(IVendaItemRepository repository, IUserContext userContext)
     {
-        _repository = VendaItemRepository;
+        _repository = repository;
+        _userContext = userContext;
     }
 
     [HttpPost]

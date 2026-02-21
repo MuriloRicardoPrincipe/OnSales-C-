@@ -14,7 +14,7 @@ public class Estoques : BaseEntity
         CriaData();
     }
 
-    private Estoques() { }
+    protected Estoques() { }
     public void AtualizacaoEstoque(Guid userUpdateId, Guid produtoId, int quantidade)
     {
         this.ProdutoId = produtoId;
@@ -23,13 +23,22 @@ public class Estoques : BaseEntity
         AtualizarData();
     }
 
-    public void RetiradaEstoque(int quantidadeEstoque, int quantidadeSolicitado)
+    public void Retirar(int quantidadeSolicitada)
     {
-        this.Quantidade = quantidadeEstoque - quantidadeSolicitado;
+        if (quantidadeSolicitada <= 0)
+            throw new ArgumentException("Quantidade inválida.");
+
+        if (Quantidade < quantidadeSolicitada)
+            throw new InvalidOperationException("Estoque insuficiente.");
+
+        Quantidade -= quantidadeSolicitada;
     }
 
-    public void DevolvendoEstoque(int quantidadeEstoque, int quantidadeDevolvida)
+    public void Devolver(int quantidadeDevolvida)
     {
-        this.Quantidade = quantidadeEstoque + quantidadeDevolvida;
+        if (quantidadeDevolvida <= 0)
+            throw new ArgumentException("Quantidade inválida.");
+
+        Quantidade += quantidadeDevolvida;
     }
 }

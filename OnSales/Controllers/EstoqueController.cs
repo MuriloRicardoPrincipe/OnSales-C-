@@ -10,7 +10,7 @@ namespace OnSales.Controllers;
 [Route("[controller]")]
 public class EstoqueController : Controller
 {
-    private IEstoqueRepository _repository;
+    private readonly IEstoqueRepository _repository;
     private readonly IUserContext _userContext;
 
     public EstoqueController(IEstoqueRepository repository, IUserContext userContext)

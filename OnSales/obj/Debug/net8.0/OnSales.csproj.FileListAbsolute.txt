@@ -152,6 +152,7 @@ C:\Users\muril\OneDrive\Documentos\Portifolio\.vs\OnSales\OnSales\obj\Debug\net8
 C:\Users\muril\OneDrive\Documentos\Portifolio\.vs\OnSales\OnSales\obj\Debug\net8.0\OnSales.csproj.CoreCompileInputs.cache
 C:\Users\muril\OneDrive\Documentos\Portifolio\.vs\OnSales\OnSales\obj\Debug\net8.0\OnSales.MvcApplicationPartsAssemblyInfo.cs
 C:\Users\muril\OneDrive\Documentos\Portifolio\.vs\OnSales\OnSales\obj\Debug\net8.0\OnSales.MvcApplicationPartsAssemblyInfo.cache
+C:\Users\muril\OneDrive\Documentos\Portifolio\.vs\OnSales\OnSales\obj\Debug\net8.0\OnSales.sourcelink.json
 C:\Users\muril\OneDrive\Documentos\Portifolio\.vs\OnSales\OnSales\obj\Debug\net8.0\scopedcss\bundle\OnSales.styles.css
 C:\Users\muril\OneDrive\Documentos\Portifolio\.vs\OnSales\OnSales\obj\Debug\net8.0\staticwebassets.build.json
 C:\Users\muril\OneDrive\Documentos\Portifolio\.vs\OnSales\OnSales\obj\Debug\net8.0\staticwebassets.development.json

@@ -26,7 +26,7 @@ public class Enderecos :BaseEntity
         CriaData();
     }
 
-    private Enderecos() { }
+    protected Enderecos() { }
     public void AtualizacaoEndereco(Guid userUpdateId, string rua, string numero, string complemento, string bairro, string cidade, string estado, string cep, Guid clienteId) 
     {
         this.Rua = rua;

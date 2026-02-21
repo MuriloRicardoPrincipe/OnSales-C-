@@ -15,7 +15,7 @@ public class Vendas : BaseEntity
         UserChageFile(userUpdateId);
         CriaData();
     }
-    private Vendas() { }
+    protected Vendas() { }
 
     public void AtualizacaoVenda(Guid userUpdateId, Guid clienteId)
     {
