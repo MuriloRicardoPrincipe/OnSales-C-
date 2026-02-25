@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("OnSales.Share.Model")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+c8e6ad37189ae5caaf209f39521131b2abbb32b9")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+f39ba5c84762bc8db71a2d55dd8c9ae3926cc62f")]
 [assembly: System.Reflection.AssemblyProductAttribute("OnSales.Share.Model")]
 [assembly: System.Reflection.AssemblyTitleAttribute("OnSales.Share.Model")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

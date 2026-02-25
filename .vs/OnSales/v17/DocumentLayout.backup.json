@@ -3,16 +3,8 @@
   "WorkspaceRootPath": "C:\\Users\\muril\\OneDrive\\Documentos\\Portifolio\\.vs\\OnSales\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{A4B66D3D-180E-4C47-B23B-F3CC8320BFC8}|OnSales\\OnSales.csproj|c:\\users\\muril\\onedrive\\documentos\\portifolio\\.vs\\onsales\\onsales\\dto\\venda\\readvendadto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A4B66D3D-180E-4C47-B23B-F3CC8320BFC8}|OnSales\\OnSales.csproj|solutionrelative:onsales\\dto\\venda\\readvendadto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{BA89F4BB-FC43-43E4-96D7-1D6E69F2FFFA}|OnSales.Share.Model\\OnSales.Share.Model.csproj|c:\\users\\muril\\onedrive\\documentos\\portifolio\\.vs\\onsales\\onsales.share.model\\model\\vendas.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{BA89F4BB-FC43-43E4-96D7-1D6E69F2FFFA}|OnSales.Share.Model\\OnSales.Share.Model.csproj|solutionrelative:onsales.share.model\\model\\vendas.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A4B66D3D-180E-4C47-B23B-F3CC8320BFC8}|OnSales\\OnSales.csproj|c:\\users\\muril\\onedrive\\documentos\\portifolio\\.vs\\onsales\\onsales\\controllers\\vendacontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A4B66D3D-180E-4C47-B23B-F3CC8320BFC8}|OnSales\\OnSales.csproj|solutionrelative:onsales\\controllers\\vendacontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{65AC5B8F-B5B7-4065-8547-A0EBFA570F9D}|OnSales.Share.Testes\\OnSales.Share.Testes.csproj|c:\\users\\muril\\onedrive\\documentos\\portifolio\\.vs\\onsales\\onsales.share.testes\\testeunit\\vendaunittest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{65AC5B8F-B5B7-4065-8547-A0EBFA570F9D}|OnSales.Share.Testes\\OnSales.Share.Testes.csproj|solutionrelative:onsales.share.testes\\testeunit\\vendaunittest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -21,51 +13,25 @@
       "VerticalTabListWidth": 256,
       "DocumentGroups": [
         {
-          "DockedWidth": 283,
-          "SelectedChildIndex": 1,
+          "DockedWidth": 182,
+          "SelectedChildIndex": 0,
           "Children": [
-            {
-              "$type": "Bookmark",
-              "Name": "ST:0:0:{1c4feeaa-4718-4aa9-859d-94ce25d182ba}"
-            },
             {
               "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "ReadVendaDto.cs",
-              "DocumentMoniker": "C:\\Users\\muril\\OneDrive\\Documentos\\Portifolio\\.vs\\OnSales\\OnSales\\DTO\\Venda\\ReadVendaDto.cs",
-              "RelativeDocumentMoniker": "OnSales\\DTO\\Venda\\ReadVendaDto.cs",
-              "ToolTip": "C:\\Users\\muril\\OneDrive\\Documentos\\Portifolio\\.vs\\OnSales\\OnSales\\DTO\\Venda\\ReadVendaDto.cs",
-              "RelativeToolTip": "OnSales\\DTO\\Venda\\ReadVendaDto.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAAEAAAAAAAAAA==",
+              "Title": "VendaUnitTest.cs",
+              "DocumentMoniker": "C:\\Users\\muril\\OneDrive\\Documentos\\Portifolio\\.vs\\OnSales\\OnSales.Share.Testes\\TesteUnit\\VendaUnitTest.cs",
+              "RelativeDocumentMoniker": "OnSales.Share.Testes\\TesteUnit\\VendaUnitTest.cs",
+              "ToolTip": "C:\\Users\\muril\\OneDrive\\Documentos\\Portifolio\\.vs\\OnSales\\OnSales.Share.Testes\\TesteUnit\\VendaUnitTest.cs",
+              "RelativeToolTip": "OnSales.Share.Testes\\TesteUnit\\VendaUnitTest.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAGAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-02-21T11:21:06.011Z",
+              "WhenOpened": "2026-02-25T13:44:40.463Z",
               "EditorCaption": ""
             },
             {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "Vendas.cs",
-              "DocumentMoniker": "C:\\Users\\muril\\OneDrive\\Documentos\\Portifolio\\.vs\\OnSales\\OnSales.Share.Model\\Model\\Vendas.cs",
-              "RelativeDocumentMoniker": "OnSales.Share.Model\\Model\\Vendas.cs",
-              "ToolTip": "C:\\Users\\muril\\OneDrive\\Documentos\\Portifolio\\.vs\\OnSales\\OnSales.Share.Model\\Model\\Vendas.cs",
-              "RelativeToolTip": "OnSales.Share.Model\\Model\\Vendas.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAALAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-02-21T11:21:12.342Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "VendaController.cs",
-              "DocumentMoniker": "C:\\Users\\muril\\OneDrive\\Documentos\\Portifolio\\.vs\\OnSales\\OnSales\\Controllers\\VendaController.cs",
-              "RelativeDocumentMoniker": "OnSales\\Controllers\\VendaController.cs",
-              "ToolTip": "C:\\Users\\muril\\OneDrive\\Documentos\\Portifolio\\.vs\\OnSales\\OnSales\\Controllers\\VendaController.cs",
-              "RelativeToolTip": "OnSales\\Controllers\\VendaController.cs",
-              "ViewState": "AgIAAAkAAAAAAAAAAAAAAB8AAAAjAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-02-21T11:12:21.554Z",
-              "EditorCaption": ""
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{1c4feeaa-4718-4aa9-859d-94ce25d182ba}"
             }
           ]
         }

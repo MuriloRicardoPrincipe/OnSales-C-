@@ -13,7 +13,7 @@ public class VendaItens :BaseEntity
     {
         this.VendaId = vendaId;
         this.ProdutoId = ProdutoId;
-        this.Quantidade = quantidade;
+        ValidaQuantidade(quantidade);
         this.Total = total;
         UserChageFile(userUpdateId);
         CriaData();
@@ -23,9 +23,15 @@ public class VendaItens :BaseEntity
     {
         this.VendaId = vendaId;
         this.ProdutoId = ProdutoId;
-        this.Quantidade = quantidade;
+        ValidaQuantidade(quantidade);
         this.Total = total;
         UserChageFile(userUpdateId);
         AtualizarData();
+    }
+
+    private void ValidaQuantidade(int quantidade)
+    {
+        if(quantidade < 0) throw new ArgumentException("Quantidade inválida.");
+        this.Quantidade = quantidade;
     }
 }

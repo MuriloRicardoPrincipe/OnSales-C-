@@ -33,7 +33,6 @@ public class VendaItemRepository : IVendaItemRepository
             .FirstOrDefaultAsync(p => p.ProdutoId == dto.ProdutoId)
             ?? throw new KeyNotFoundException("Estoque não encontrado.");
 
-        // 🔥 Agora o estoque se valida sozinho
         estoque.Retirar(dto.Quantidade);
 
         var totalItem = Math.Round(produto.PrecoVenda * dto.Quantidade, 2, MidpointRounding.AwayFromZero);

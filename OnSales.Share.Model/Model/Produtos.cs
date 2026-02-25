@@ -12,8 +12,7 @@
         {
             Nome = nome;
             Descricao = descricao;
-            PrecoVenda = precoVenda;
-            PrecoCusto = precoCusto;
+            ValidarPrecos(precoVenda, precoCusto);
             UserChageFile(userUpdateId);
             CriaData();
         }
@@ -23,10 +22,24 @@
         {
             Nome = nome;
             Descricao = descricao;
-            PrecoVenda = precoVenda;
-            PrecoCusto = precoCusto;
+            ValidarPrecos(precoVenda, precoCusto);
             UserChageFile(userUpdateId);
             AtualizarData();
+        }
+
+        private void ValidarPrecos(decimal precoVenda, decimal precoCusto)
+        {
+            if (precoVenda <= 0)
+                throw new ArgumentException("Preço de venda deve ser maior que zero.");
+
+            if (precoCusto <= 0)
+                throw new ArgumentException("Preço de custo deve ser maior que zero.");
+
+            if (precoVenda < precoCusto)
+                throw new ArgumentException("Preço de venda não pode ser menor que o custo.");
+
+            PrecoVenda = precoVenda;
+            PrecoCusto = precoCusto;
         }
     }
 }
